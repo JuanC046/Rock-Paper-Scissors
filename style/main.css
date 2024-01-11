@@ -1,0 +1,178 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px;
+}
+#title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+  border: 5px solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+}
+#score-wrap {
+  width: 120px;
+  height: 100px;
+  margin: 8px;
+  display: grid;
+  text-align: center;
+  color: hsl(229, 25%, 31%);
+  background-color: aliceblue;
+  border: 2px solid hsl(0, 1%, 14%);
+  border-radius: 10px;
+}
+h3 {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+#score {
+  margin-top: 0px;
+  color: hsl(228, 24%, 20%);
+  font-size: 50px;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  height: 412px;
+}
+
+svg {
+}
+
+.image-pick {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+#triangle {
+  width: 240px;
+  height: 240px;
+}
+#circle-paper {
+  stroke: hsl(230, 89%, 62%);
+}
+#circle-scissors {
+  stroke: hsl(39, 89%, 49%);
+}
+#circle-rock {
+  stroke: hsl(349, 71%, 52%);
+}
+
+footer {
+    height: 50px;
+    text-align: end;
+    padding: 16px;
+}
+#rules {
+    cursor: pointer;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    color: aliceblue;
+    font-size: 16px;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.ventana {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.ventanaTitulo{
+  text-align: left;
+  grid-area: T;
+  color: #ccc;
+}
+.ventanaBoton{
+  justify-self: end; 
+  text-align: right;
+  grid-area: S;
+  background-color: white;
+  width: min-content;
+  height: min-content;
+  border: 0px;
+  font-size:xx-large;
+  color: #ccc;
+}
+.ventanaBoton:hover{
+  cursor: pointer;
+  background-color: #ccc;
+}
+.contenidoVentana {
+  text-align: center;
+  grid-area: C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#image-rules {
+  width: 100%;
+  height: 100%;
+}
+/* Step 2 and 3 */
+.step23{
+  display: grid;
+  grid-template-rows: repeat(20% 80%);
+  grid-template-areas: "T1 T2"
+                      "C1 C2";
+  height: 95%;
+  text-align: center;
+  width: 512px;
+}
+.pickedTitle1{
+  grid-area: T1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+.pickedTitle2{
+  grid-area: T2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+#pickedUser{
+  grid-area: C1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pickedPC{
+  grid-area: C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Hidden content */
+.hiddenContent {
+  display: none;
+}
+
+.pickedIcon {
+  width: 110px;
+  height: 110px;
+}

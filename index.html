@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,19 +8,19 @@
   </head>
   <body>
     <header>
-        <div id="title">
-            <figure id="logo">
-                <img src="images/logo.svg" alt="logo"/>
-              </figure>
-              <div id="score-wrap">
-                <h3>SCORE</h3>
-                <h2 id="score">12</h2>
-              </div>
+      <div id="title">
+        <figure id="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </figure>
+        <div id="score-wrap">
+          <h3>SCORE</h3>
+          <h2 id="score">12</h2>
         </div>
+      </div>
     </header>
-    <main>
+    <main id="mainContent">
       <svg width="512" height="412" id="options">
-        <image x="128" y="128" href="images/bg-triangle.svg" id="triangle"/>
+        <image x="128" y="128" href="images/bg-triangle.svg" id="triangle" />
 
         <!-- Paper -->
         <circle
@@ -27,11 +28,11 @@
           cy="128"
           r="64"
           stroke="black"
-          stroke-width="10"
+          stroke-width="15"
           fill="white"
           id="circle-paper"
         />
-        <image x="96" y="96" href="images/icon-paper.svg" id="paper"/>
+        <image x="96" y="96" href="images/icon-paper.svg" id="paper" class="image-pick"/>
 
         <!-- Scissors -->
         <circle
@@ -39,11 +40,11 @@
           cy="128"
           r="64"
           stroke="black"
-          stroke-width="10"
+          stroke-width="15"
           fill="white"
           id="circle-scissors"
         />
-        <image x="342" y="96" href="images/icon-scissors.svg" id="scissors"/>
+        <image x="342" y="96" href="images/icon-scissors.svg" id="scissors" class="image-pick"/>
 
         <!-- Rock -->
         <circle
@@ -51,15 +52,31 @@
           cy="300"
           r="64"
           stroke="black"
-          stroke-width="10"
+          stroke-width="15"
           fill="white"
           id="circle-rock"
         />
-        <image x="218" y="268" href="images/icon-rock.svg" id="rock"/>
+        <image x="218" y="268" href="images/icon-rock.svg" id="rock" class="image-pick"/>
       </svg>
     </main>
+    <!-- Ventana flotante -->
+    <div id="ventanaFlotante" class="ventana">
+      <h2 class="ventanaTitulo">RULES</h2>
+      <button class="ventanaBoton">X</button>
+      <div class="contenidoVentana">
+        <svg width="400" height="400">
+          <image
+            x="0"
+            y="0"
+            href="images/image-rules.svg"
+            id="image-rules"
+          ></image>
+        </svg>
+      </div>
+    </div>
     <footer>
       <button id="rules">RULES</button>
     </footer>
   </body>
+  <script src="script/index.js" type="module"></script>
 </html>
