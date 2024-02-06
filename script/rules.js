@@ -1,19 +1,13 @@
 function mostrarVentana() {
-  var ventanaFlotante = document.getElementById("ventanaFlotante");
-  ventanaFlotante.style = `   
-        display: grid;
-        grid-template-areas: 
-            "T T T S"
-            "C C C C"
-            "C C C C"
-            "C C C C";`;
-  // Agregar una clase para aplicar estilos específicos
+  let ventanaFlotante = document.getElementById("ventanaFlotante");
+  ventanaFlotante.classList.remove("hiddenContent");
+  ventanaFlotante.classList.add("flotante");
 }
 
 function cerrarVentana() {
-  var ventanaFlotante = document.getElementById("ventanaFlotante");
-  ventanaFlotante.style.display = "none";
-  ventanaFlotante.classList.remove("mostrando"); // Remover la clase para quitar estilos específicos
+  let ventanaFlotante = document.getElementById("ventanaFlotante");
+  ventanaFlotante.setAttribute("class","hiddenContent");
+  ventanaFlotante.classList.remove("flotante"); // Remover la clase para quitar estilos específicos
 }
 
 //Exportar las funciones
