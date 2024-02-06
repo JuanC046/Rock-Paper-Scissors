@@ -18,19 +18,17 @@ const updateScore = () => {
 
 function action(winner) {
   const user_message = document.getElementById("user-message");
-  if (winner == "pc") {
+  let new_score;
+  const current_score = getScore();
+  if (winner === "pc") {
     user_message.textContent = "YOU LOSE";
-    const current_score = getScore();
-    const new_score = current_score - 1;
-    setScore(new_score);
-    updateScore();
+    new_score = current_score - 1;
   } else {
     user_message.textContent = "YOU WIN";
-    const current_score = getScore();
-    const new_score = current_score + 1;
-    setScore(new_score);
-    updateScore();
+    new_score = current_score + 1;
   }
+  setScore(new_score);
+  updateScore();
 }
 
 export { action, updateScore };

@@ -85,8 +85,14 @@ footer {
     padding: 8px;
 }
 
-.ventana {
-  display: none;
+/* Ventana flotante */
+.flotante {
+  display: grid;
+  grid-template-areas: 
+      "T T T S"
+      "C C C C"
+      "C C C C"
+      "C C C C";
   position: fixed;
   top: 50%;
   left: 50%;
@@ -204,6 +210,7 @@ footer {
   font-size: 32px;
   margin-bottom: 16px;
 }
+
 /* Hidden content */
 .hiddenContent {
   display: none;
